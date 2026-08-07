@@ -8,11 +8,17 @@ import Certificates from "../components/Certificates";
 import Resume from "../components/Resume";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop";
+import ScrollProgress from "../components/ScrollProgress";
+import AnimatedBackground from "../components/AnimatedBackground";
 
 function Home() {
   return (
     <>
+      <AnimatedBackground />
+      <ScrollProgress />
       <Navbar />
+      <ScrollToTop />
       <Hero />
       <About />
       <Skills />
