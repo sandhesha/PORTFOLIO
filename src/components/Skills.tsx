@@ -1,149 +1,282 @@
 import { motion } from "framer-motion";
 import {
   FaReact,
-  FaHtml5,
-  FaCss3Alt,
-  FaJsSquare,
   FaPython,
-  FaNodeJs,
   FaDatabase,
   FaGitAlt,
+  FaHtml5,
+  FaCss3Alt,
+  FaJs,
+  FaBrain,
 } from "react-icons/fa";
-import {
-  SiTypescript,
-  SiTailwindcss,
-  SiMongodb,
-  SiMysql,
-} from "react-icons/si";
+import { SiTypescript, SiTailwindcss, SiMongodb, SiFigma } from "react-icons/si";
 
 const skills = [
   {
-    icon: <FaReact className="text-cyan-400 text-5xl" />,
     name: "React",
-    level: 95,
+    icon: <FaReact />,
+    level: "Advanced",
+    category: "Frontend",
   },
   {
-    icon: <SiTypescript className="text-blue-500 text-5xl" />,
     name: "TypeScript",
-    level: 90,
+    icon: <SiTypescript />,
+    level: "Advanced",
+    category: "Frontend",
   },
   {
-    icon: <FaJsSquare className="text-yellow-400 text-5xl" />,
     name: "JavaScript",
-    level: 92,
+    icon: <FaJs />,
+    level: "Advanced",
+    category: "Frontend",
   },
   {
-    icon: <SiTailwindcss className="text-cyan-500 text-5xl" />,
+    name: "HTML & CSS",
+    icon: <FaHtml5 />,
+    level: "Advanced",
+    category: "Frontend",
+  },
+  {
     name: "Tailwind CSS",
-    level: 94,
+    icon: <SiTailwindcss />,
+    level: "Advanced",
+    category: "Frontend",
   },
   {
-    icon: <FaHtml5 className="text-orange-500 text-5xl" />,
-    name: "HTML",
-    level: 96,
-  },
-  {
-    icon: <FaCss3Alt className="text-blue-400 text-5xl" />,
-    name: "CSS",
-    level: 95,
-  },
-  {
-    icon: <FaPython className="text-yellow-300 text-5xl" />,
     name: "Python",
-    level: 88,
+    icon: <FaPython />,
+    level: "Intermediate",
+    category: "AI / ML",
   },
   {
-    icon: <FaNodeJs className="text-green-500 text-5xl" />,
-    name: "Node.js",
-    level: 82,
+    name: "AI / ML",
+    icon: <FaBrain />,
+    level: "Intermediate",
+    category: "AI / ML",
   },
   {
-    icon: <SiMongodb className="text-green-400 text-5xl" />,
     name: "MongoDB",
-    level: 85,
+    icon: <SiMongodb />,
+    level: "Intermediate",
+    category: "Database",
   },
   {
-    icon: <SiMysql className="text-blue-500 text-5xl" />,
-    name: "MySQL",
-    level: 84,
-  },
-  {
-    icon: <FaDatabase className="text-purple-500 text-5xl" />,
     name: "SQL",
-    level: 90,
+    icon: <FaDatabase />,
+    level: "Intermediate",
+    category: "Database",
   },
   {
-    icon: <FaGitAlt className="text-red-500 text-5xl" />,
     name: "Git",
-    level: 88,
+    icon: <FaGitAlt />,
+    level: "Intermediate",
+    category: "Tools",
+  },
+  {
+    name: "Figma",
+    icon: <SiFigma />,
+    level: "Intermediate",
+    category: "Tools",
+  },
+  {
+    name: "CSS",
+    icon: <FaCss3Alt />,
+    level: "Advanced",
+    category: "Frontend",
   },
 ];
 
 function Skills() {
   return (
-    <section id="skills" className="py-24">
-      <div className="container mx-auto">
+    <section
+      id="skills"
+      className="relative z-10 bg-[#080808] text-white py-28 px-6 lg:px-16"
+    >
+      <div className="container-main">
 
-        <motion.h2
-          initial={{ opacity: 0, y: -40 }}
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: .6 }}
-          className="text-center text-5xl font-bold mb-5"
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="mb-16"
         >
-          My <span className="gradient-text">Skills</span>
-        </motion.h2>
+          <p className="section-label mb-4">
+            My Skills
+          </p>
 
-        <p className="text-center text-gray-400 mb-20">
-          Technologies I use to build modern applications.
-        </p>
+          <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <h2 className="section-title max-w-3xl">
+              Tools I use to
+              <span> build things.</span>
+            </h2>
+
+            <p className="text-gray-500 max-w-md leading-7">
+              A combination of frontend development, AI/ML,
+              databases and development tools that I use to
+              turn ideas into working applications.
+            </p>
+
+          </div>
+        </motion.div>
+
+        {/* Skills Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
           {skills.map((skill, index) => (
-
             <motion.div
               key={skill.name}
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: .5,
-                delay: index * .05,
+              initial={{
+                opacity: 0,
+                y: 40,
               }}
-              className="card p-7 hover:scale-105 duration-300"
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.05,
+              }}
+              whileHover={{
+                y: -8,
+              }}
+              className="
+                group
+                relative
+                bg-[#111111]
+                border
+                border-[#252525]
+                rounded-2xl
+                p-6
+                min-h-[180px]
+                flex
+                flex-col
+                justify-between
+                overflow-hidden
+                transition-all
+                duration-300
+                hover:border-[#ff3b30]
+              "
             >
 
-              <div className="mb-6">
+              {/* Glow */}
+              <div
+                className="
+                  absolute
+                  -right-10
+                  -top-10
+                  w-28
+                  h-28
+                  rounded-full
+                  bg-[#ff3b30]/10
+                  blur-2xl
+                  opacity-0
+                  group-hover:opacity-100
+                  transition
+                "
+              />
+
+              {/* Icon */}
+              <div
+                className="
+                  relative
+                  w-12
+                  h-12
+                  rounded-xl
+                  bg-[#1c1c1c]
+                  border
+                  border-[#303030]
+                  flex
+                  items-center
+                  justify-center
+                  text-xl
+                  text-[#ff3b30]
+                  group-hover:bg-[#ff3b30]
+                  group-hover:text-white
+                  group-hover:border-[#ff3b30]
+                  transition-all
+                  duration-300
+                "
+              >
                 {skill.icon}
               </div>
 
-              <h3 className="text-2xl font-bold">
-                {skill.name}
-              </h3>
+              {/* Content */}
+              <div className="relative mt-8">
 
-              <div className="mt-6 h-3 bg-gray-700 rounded-full overflow-hidden">
+                <h3 className="font-bold text-lg">
+                  {skill.name}
+                </h3>
 
-                <motion.div
-                  initial={{ width: 0 }}
-                  whileInView={{
-                    width: `${skill.level}%`,
-                  }}
-                  transition={{
-                    duration: 1,
-                  }}
-                  className="h-full rounded-full bg-gradient-to-r from-cyan-400 to-blue-500"
-                />
+                <div className="flex items-center justify-between mt-2">
+
+                  <span className="text-xs text-gray-600">
+                    {skill.category}
+                  </span>
+
+                  <span className="text-xs text-[#ff3b30]">
+                    {skill.level}
+                  </span>
+
+                </div>
 
               </div>
 
-              <p className="mt-3 text-cyan-400 font-semibold">
-                {skill.level}%
-              </p>
-
             </motion.div>
-
           ))}
 
         </div>
+
+        {/* Bottom Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="
+            mt-8
+            rounded-3xl
+            border
+            border-[#252525]
+            bg-[#111111]
+            p-8
+            md:p-10
+            flex
+            flex-col
+            md:flex-row
+            md:items-center
+            md:justify-between
+            gap-6
+          "
+        >
+
+          <div>
+            <p className="text-gray-500 text-sm mb-2">
+              Always learning
+            </p>
+
+            <h3 className="text-2xl md:text-3xl font-bold">
+              Currently exploring{" "}
+              <span className="text-[#ff3b30]">
+                Generative AI
+              </span>
+            </h3>
+          </div>
+
+          <a
+            href="#projects"
+            className="orange-button w-fit"
+          >
+            See My Projects
+          </a>
+
+        </motion.div>
 
       </div>
     </section>
