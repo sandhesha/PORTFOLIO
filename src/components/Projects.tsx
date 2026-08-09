@@ -19,7 +19,7 @@ const projects: Project[] = [
     title: "Face Recognition Attendance System",
     description:
       "A smart attendance management system that uses facial recognition to identify users and automatically record attendance.",
-    image: "/projects/face-attendance.png",
+    image: "/images/projects/aiface.png",
     technologies: [
       "React",
       "TypeScript",
@@ -28,6 +28,7 @@ const projects: Project[] = [
     ],
     github:
       "https://github.com/sandhesha/face-recognition-attendance-system",
+    demo: "https://github.com/sandhesha/face-recognition-attendance-system",
   },
 
   {
@@ -51,14 +52,15 @@ const projects: Project[] = [
     title: "Speech Recognization System",
     description:
       "Here is a very simple version: **Speech recognition** is a technology that lets a computer **listen to your voice and turn what you say into text**. It helps in things like voice typing, voice assistants, and voice commands.",
-    image: "/projects/speech-recognition.png",
+    image: "/images/projects/speech1.png",
     technologies: [
       "React",
       "Node.js",
       "MongoDB",
     ],
     github:
-      "https://github.com/sandhesha/speech-recognition-system",
+      "https://github.com/sandhesha/speech-recognitation",
+    demo: "https://github.com/sandhesha/speech-recognitation",
   },
 ];
 

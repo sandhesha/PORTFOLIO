@@ -16,28 +16,28 @@ interface Certificate {
 
 const certificates: Certificate[] = [
   {
-    title: "Artificial Intelligence & Machine Learning",
+    title: "Artificial Intelligence for All",
     organization: "Your Organization",
     date: "2025",
     description:
-      "Certificate related to artificial intelligence, machine learning and practical AI concepts.",
-    image: "/certificates/ai-ml.png",
+      "Completed an introductory program focused on the fundamentals and applications of Artificial Intelligence.",
+    image: "/certificates/c1.png",
   },
   {
-    title: "Web Development",
+    title: "Tech A Cloud Computing using Microsoft Azure",
     organization: "Your Organization",
     date: "2025",
     description:
-      "Certificate covering modern web development technologies and application development.",
-    image: "/certificates/web-development.png",
+      "Completed training on cloud computing concepts, Microsoft Azure services, and cloud-based solutions.",
+    image: "/certificates/c2.png",
   },
   {
-    title: "Python Programming",
+    title: "Getting Started with AI",
     organization: "Your Organization",
     date: "2025",
     description:
-      "Certificate demonstrating knowledge of Python programming and development fundamentals.",
-    image: "/certificates/python.png",
+      "Completed an introductory program covering AI fundamentals, concepts, and real-world applications.",
+    image: "/certificates/c3.png",
   },
 ];
 

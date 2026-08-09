@@ -63,7 +63,7 @@ function Hero() {
                 "
               >
                 <img
-                  src="/pic.png"
+                  src="/p2.png"
                   alt="Sandhesha"
                   className="
                     w-full
